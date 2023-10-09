@@ -4,8 +4,9 @@ import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Home = () => {
+const Home = ({connectWallet}) => {
 
     const history = useNavigate();
 
@@ -19,8 +20,6 @@ const Home = () => {
 
 
     const [data, setData] = useState([]);
-    console.log(inpval);
-
     const getdata = (e) => {
 
 
@@ -105,8 +104,8 @@ const Home = () => {
 
                                 <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
                             </Form.Group>
-                            <Button variant="primary" className='col-lg-6' onClick={addData} style={{ background: "rgb(67, 185, 127)" }} type="submit">
-                                Submit
+                            <Button variant="primary" className='col-lg-6' onClick={connectWallet} style={{ background: "rgb(67, 185, 127)" }} type="submit">
+                                Login With Metamask
                             </Button>
                         </Form>
                     </div>

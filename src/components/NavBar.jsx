@@ -1,50 +1,37 @@
-import React, { useEffect, useState } from 'react'
-import '../css/navbar.css'
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "../css/navbar.css";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const [showNavbar, setShowNavbar] = useState(false);
 
-    const [active, setActive] = useState(true);
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
 
-    
   return (
-    <div className="navigation">
-        {
-            active ?
-            <ul>
-            <li onClick={() => setActive(!active)} className="list active" >
-                <a href="#">
-                <span className="icon"><ion-icon name="person-outline"></ion-icon></span>
-                <span className="title"><NavLink to="/profile">Profile</NavLink></span>
-                </a>
+    <nav className="navbar" style={{ border: "1px solid white" }}>
+      <div className="container">
+        <div className="logo">
+          <p className="p-tag">VoteChain</p>
+        </div>
+        <div className="menu-icon" onClick={handleShowNavbar}></div>
+        <div className={`nav-elements  ${showNavbar && "active"}`}>
+          <ul>
+            <li>
+              <NavLink to="/">Vote Now</NavLink>
             </li>
-            <li onClick={() => setActive(!active)} className="list">
-                <a href="#">
-                <span className="icon"><iconify-icon icon="mdi:vote" width="30" height="30"></iconify-icon></span>
-                <span className="title"><NavLink to="/">Vote Here</NavLink></span>
-                </a>
+            <li>
+              <NavLink to="/knowMore">Know More</NavLink>
             </li>
-        </ul>
-        :
-        <ul>
-        <li onClick={() => setActive(!active)} className="list" >
-            <a href="#">
-            <span className="icon"><ion-icon name="person-outline"></ion-icon></span>
-            <span className="title"><NavLink to="/profile">Profile</NavLink></span>
-            </a>
-        </li>
-        <li onClick={() => setActive(!active)} className="list active">
-            <a href="#">
-            <span className="icon"><iconify-icon icon="mdi:vote" width="30" height="30"></iconify-icon></span>
-            <span className="title"><NavLink to="/">Vote Here</NavLink></span>
-            </a>
-        </li>
-    </ul>
-        }
-        
-</div>
-  )
-}
+            <li>
+              <NavLink to="/contact">Contact Us</NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-
-export default NavBar
+export default NavBar;
