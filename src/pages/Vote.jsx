@@ -69,7 +69,9 @@ function Vote(props) {
             </Table>
           </div>
 
-          <button onClick={props.logOut} className="btn btn-danger">LogOut</button>
+          <button onClick={props.logOut} className="btn btn-danger">
+            LogOut
+          </button>
         </div>
       </div>
     </>

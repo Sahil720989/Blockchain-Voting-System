@@ -181,31 +181,15 @@ function App() {
   async function handleNumberChange(e) {
     setNumber(e.target.value);
   }
-  
-  function logOut () {
-    window.localStorage.removeItem('auth');
-    window.localStorage.removeItem('address');
+
+  function logOut() {
+    window.localStorage.removeItem("auth");
+    window.localStorage.removeItem("address");
   }
 
   return (
-    // <Router>
-    //   <Routes>
-    //   <Route path='/' element={ <LoginPage connectWallet={connectMetaMask} />} />
-    //   {/* <Route path='/' element={ <NavBar />} /> */}
-    //   {/* <Route path='/' element={ <Vote />} /> */}
-    //   {/* <Route path='/' element={ <ContactUs />} /> */}
-    // </Routes>
-    // </Router>
-
     <>
-      <div
-        // style={{
-        //   background:
-        //     "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 35%, rgba(0,212,255,1) 100%)",
-        //   height: '100vh'
-        // }}
-        className="App"
-      >
+      <div className="App">
         {localStorage.getItem("auth") ? (
           <div>
             <Router>
@@ -214,7 +198,7 @@ function App() {
                   path="/"
                   element={
                     <Vote
-                      account={localStorage.getItem('address')}
+                      account={localStorage.getItem("address")}
                       candidates={candidates}
                       remainingTime={remainingTime}
                       number={number}
@@ -234,16 +218,6 @@ function App() {
           <LoginPage connectWallet={connectToMetamask} />
         )}
 
-        {/* {
-          window.location.pathname = "/contact" ?
-          <Router>
-          <Routes>
-            <Route path="/contact" element={<ContactForm />} />
-          </Routes>
-        </Router>
-          :
-          <LoginPage connectWallet={connectToMetamask} />
-        } */}
       </div>
     </>
   );
