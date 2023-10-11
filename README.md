@@ -57,8 +57,8 @@ Special thanks to our talented team members for their contributions.
 Inspired by the potential of blockchain technology to enhance democracy and transparency in voting.
 - [Rana MS](https://github.com/Ranamalsingh12)
 - [Sahil Kaler](https://github.com/Sahilkaler)
-- [Aditya Rao](https://github.com/AdityaRao4)
-- [Sahil Singh]()
+- [Aditya Rao](https://github.com/adityarao3)
+- [Sahil Singh](https://github.com/Sahil720989)
 
 
 
