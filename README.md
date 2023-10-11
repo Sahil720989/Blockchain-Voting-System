@@ -14,7 +14,7 @@ This project is an implementation of a secure and transparent voting system usin
 ## Technologies Used
 
 - React
-- Ethereum Blockchain (or your chosen blockchain platform)
+- Volta (Test Net)
 - MetaMask (for user authentication)
 - React Bootstrap (for styling)
 - Solidity (for smart contract development)
