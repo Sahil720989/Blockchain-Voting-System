@@ -48,8 +48,6 @@ This project is an implementation of a secure and transparent voting system usin
 - Monitor real-time vote counts.
 - Explore the team members behind this project.
 
-#Contributions
-Contributions are welcome! Please follow the Contributing Guidelines to get started.
 
 # Contact
 If you have any questions or feedback, please contact us at ranams99911@gmail.com , sahilkaler12344@gmail.com
